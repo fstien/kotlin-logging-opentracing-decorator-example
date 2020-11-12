@@ -1,6 +1,7 @@
 package com.github.fstien
 
 import com.fasterxml.jackson.databind.SerializationFeature
+import com.github.fstien.kotlin.logging.opentracing.decorator.withOpenTracingLogs
 import com.zopa.ktor.opentracing.OpenTracingServer
 import com.zopa.ktor.opentracing.ThreadContextElementScopeManager
 import io.jaegertracing.Configuration
@@ -16,7 +17,7 @@ import mu.KotlinLogging
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
-private val logger = KotlinLogging.logger {}
+private val logger = KotlinLogging.logger {}.withOpenTracingLogs()
 
 @Suppress("unused") // Referenced in application.conf
 @kotlin.jvm.JvmOverloads
