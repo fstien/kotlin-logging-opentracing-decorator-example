@@ -1,7 +1,6 @@
 package com.github.fstien
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
-import com.github.fstien.kotlin.logging.opentracing.decorator.withOpenTracingLogs
 import com.zopa.ktor.opentracing.OpenTracingClient
 import com.zopa.ktor.opentracing.span
 import io.ktor.client.*
@@ -17,7 +16,7 @@ import java.time.LocalDateTime
 import java.util.*
 
 
-private val logger = KotlinLogging.logger {}.withOpenTracingLogs()
+private val logger = KotlinLogging.logger {}
 
 class EarthquakeClient {
     val client = HttpClient(Apache) {
