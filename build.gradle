@@ -45,4 +45,5 @@ dependencies {
     implementation "com.zopa:ktor-opentracing:0.1.1"
 
     implementation 'io.github.microutils:kotlin-logging-jvm:2.0.3'
+    implementation 'com.github.fstien:kotlin-logging-opentracing-decorator:0.1.0'
 }
