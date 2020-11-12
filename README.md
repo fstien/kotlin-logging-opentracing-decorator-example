@@ -47,11 +47,11 @@ Retrieves data about earthquakes that happened today using an [API from the U.S.
 
 ### Steps
 
-1. Import the `kotlin-logging-opentracing-decorator` dependency.
+1. Import the `kotlin-logging-opentracing-decorator` dependency. ([Commit](https://github.com/fstien/kotlin-logging-opentracing-decorator-example/commit/4c96d82155659b1e755cc11b47f990eef1d61adb)).
     ```
     implementation 'com.github.fstien:kotlin-logging-opentracing-decorator:0.1.0'
     ```
-2. Call the `withOpenTracingLogs` extension function on your loggers. 
+2. Call the `withOpenTracingLogs` extension function on your loggers. ([Commit](https://github.com/fstien/kotlin-logging-opentracing-decorator-example/commit/db69e50720d95c4d887358bca5e1887736d28552)).
 
     ```kotlin
     val logger = KotlinLogging.logger {}.withOpenTracingLogs()
